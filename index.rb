@@ -50,9 +50,9 @@ def decode_phrase(phrase)
   final = ''
   phrase_array.each do |j|
     final = if final == ''
-              decode_word(j).to_s
+      decode_word(j).to_s
             else
-              "#{final} #{decode_word(j)}.to_s"
+      "#{final} #{decode_word(j).to_s}"
             end
   end
   print final
