@@ -51,7 +51,11 @@ def decode_phrase(phrase)
     final = if final == ''
               decode_word(j).to_s
             else
+<<<<<<< HEAD
               "#{final} #{decode_word(j)}.to_s"
+=======
+              "#{final} #{decode_word(j).to_s}"
+>>>>>>> 63d799371e20927c896c2f5ca3bfa7eb7da456dd
             end
   end
   print final
