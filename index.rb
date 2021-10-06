@@ -1,34 +1,33 @@
-
 def decode_char(character)
   letters = {
-  A: '.-',
-  B: '-...',
-  C: '-.-.',
-  D: '-..',
-  E: '.',
-  F: '..-.',
-  G: '--.',
-  H: '....',
-  I: '..',
-  J: '.---',
-  K: '-.-',
-  L: '.-..',
-  M: '--',
-  N: '-.',
-  O: '---',
-  P: '.--.',
-  Q: '--.-',
-  R: '.-.',
-  S: '...',
-  T: '-',
-  U: '..-',
-  V: '...-',
-  W: '.--',
-  X: '-..-',
-  Y: '-.--',
-  Z: '--..'
-}
-  letters.each do |key, value|
+    A: '.-',
+    B: '-...',
+    C: '-.-.',
+    D: '-..',
+    E: '.',
+    F: '..-.',
+    G: '--.',
+    H: '....',
+    I: '..',
+    J: '.---',
+    K: '-.-',
+    L: '.-..',
+    M: '--',
+    N: '-.',
+    O: '---',
+    P: '.--.',
+    Q: '--.-',
+    R: '.-.',
+    S: '...',
+    T: '-',
+    U: '..-',
+    V: '...-',
+    W: '.--',
+    X: '-..-',
+    Y: '-.--',
+    Z: '--..'
+  }
+  letters.each do |key, value|   
     break if value == character
 
     return key
@@ -50,9 +49,9 @@ def decode_phrase(phrase)
   final = ''
   phrase_array.each do |j|
     final = if final == ''
-      decode_word(j).to_s
+              decode_word(j).to_s
             else
-      "#{final} #{decode_word(j).to_s}"
+              "#{final} #{decode_word(j)}.to_s"
             end
   end
   print final
