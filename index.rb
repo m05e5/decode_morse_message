@@ -1,4 +1,6 @@
-letters = {
+
+def decode_char(character)
+  letters = {
   A: '.-',
   B: '-...',
   C: '-.-.',
@@ -26,8 +28,6 @@ letters = {
   Y: '-.--',
   Z: '--..'
 }
-
-def decode_char(character)
   letters.each do |key, value|
     break if value == character
 
