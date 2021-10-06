@@ -31,7 +31,6 @@ def decode_char(character)
   $letters.each {
     |key,value|
     if value == character
-      print(key)
       return key
       break
     end
