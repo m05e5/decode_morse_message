@@ -49,7 +49,8 @@ def decode_word(word)
 end
     
 def decode_phrase(phrase)
-    phraseArray = phrase.split(/   /, -1)
+    newPhrase = phrase.gsub("/", " ")
+    phraseArray = newPhrase.split(/   /, -1)
     final = ""
     phraseArray.each {
         |j|
