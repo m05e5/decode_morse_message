@@ -47,14 +47,14 @@ end
 
 def decode_phrase(phrase)
   new_phrase = phrase.gsub('/', ' ')
-    phrase_array = new_phrase.split(/   /, -1)
-    final = ''
-    phrase_array.each do |j|
-      final = if final == ''
-        decode_word(j).to_s
-              else
-        "#{final} #{decode_word(j).to_s}"
-              end
-    end
-    print final
+  phrase_array = new_phrase.split(/   /, -1)
+  final = ''
+  phrase_array.each do |j|
+    final = if final == ''
+      decode_word(j).to_s
+            else
+      "#{final} #{decode_word(j).to_s}"
+            end
+  end
+  print final
 end
