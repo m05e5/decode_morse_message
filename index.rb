@@ -1,4 +1,4 @@
-$letters = {
+letters = {
   A: '.-',
   B: '-...',
   C: '-.-.',
@@ -28,10 +28,9 @@ $letters = {
 }
 
 def decode_char(character)
-  $letters.each do |key, value|
-    if value == character
+  letters.each do |key, value|
+    break if value == character
       return key
-      break
     end
   end
 end
