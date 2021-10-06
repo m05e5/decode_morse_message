@@ -12,7 +12,7 @@ $letters = {
     "K": "-.-",
     "L": ".-..",
     "M": "--",
-    "N": ".-",
+    "N": "-.",
     "O": "---",
     "P": ".--.",
     "Q": "--.-",
@@ -32,7 +32,19 @@ def decode_char(character)
         |key,value|
         if value === character
             print(key)
+            return key
             break
         end
     }
 end
+
+def decode_word(word)
+    wordArray = word.split
+    result = ""
+    wordArray.each {
+      |i|
+      result = result + decode_char(i).to_s
+    }
+    return result
+end
+    
