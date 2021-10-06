@@ -24,7 +24,7 @@ $letters = {
     "W": ".--",
     "X": "-..-",
     "Y": "-.--",
-    "Z": "--.."
+    "Z": "--.." 
 }
 
 def decode_char(character)
