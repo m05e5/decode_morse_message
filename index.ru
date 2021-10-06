@@ -24,28 +24,28 @@ $letters = {
     W: '.--',
     X: '-..-',
     Y: '-.--',
-    Z: '--..' 
+    Z: '--..'
 }
 
 def decode_char(character)
-    $letters.each {
-        |key,value|
-        if value === character
-            print(key)
-            return key
-            break
-        end
-    }
+  $letters.each {
+    |key,value|
+    if value == character
+      print(key)
+      return key
+      break
+    end
+  }
 end
 
 def decode_word(word)
-    word_array = word.split
-    result = ''
-    word_array.each {
-    |i|
+  word_array = word.split
+  result = ''
+  word_array.each {
+  |i|
     result = result + decode_char(i).to_s
-    }
-    return result
+  }
+  return result
 end
     
 def decode_phrase(phrase)
@@ -53,12 +53,12 @@ def decode_phrase(phrase)
     phrase_array = new_phrase.split(/   /, -1)
     final = ''
     phrase_array.each {
-    |j|
-    if final === ''
-    final = decode_word(j).to_s
-    else
-    final = final + ' ' + decode_word(j).to_s
-    end
+      |j|
+      if final == ''
+        final = decode_word(j).to_s
+      else
+        final = final + ' ' + decode_word(j).to_s
+      end
     }
     print final
 end
