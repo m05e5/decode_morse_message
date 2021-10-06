@@ -48,3 +48,16 @@ def decode_word(word)
     return result
 end
     
+def decode_phrase(phrase)
+    phraseArray = phrase.split(/   /, -1)
+    final = ""
+    phraseArray.each {
+        |j|
+        if final === ""
+            final = decode_word(j).to_s
+        else
+            final = final + " " + decode_word(j).to_s
+        end
+    } 
+    return final
+end
