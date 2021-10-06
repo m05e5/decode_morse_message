@@ -30,7 +30,8 @@ letters = {
 def decode_char(character)
   letters.each do |key, value|
     break if value == character
-      return key
+    
+    return key
   end
 end
 
