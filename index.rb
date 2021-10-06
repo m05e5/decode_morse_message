@@ -1,38 +1,37 @@
-$letters = {
-    A: '.-',
-    B: '-...',
-    C: '-.-.',
-    D: '-..',
-    E: '.',
-    F: '..-.',
-    G: '--.',
-    H: '....',
-    I: '..',
-    J: '.---',
-    K: '-.-',
-    L: '.-..',
-    M: '--',
-    N: '-.',
-    O: '---',
-    P: '.--.',
-    Q: '--.-',
-    R: '.-.',
-    S: '...',
-    T: '-',
-    U: '..-',
-    V: '...-',
-    W: '.--',
-    X: '-..-',
-    Y: '-.--',
-    Z: '--..'
+letters = {
+  A: '.-',
+  B: '-...',
+  C: '-.-.',
+  D: '-..',
+  E: '.',
+  F: '..-.',
+  G: '--.',
+  H: '....',
+  I: '..',
+  J: '.---',
+  K: '-.-',
+  L: '.-..',
+  M: '--',
+  N: '-.',
+  O: '---',
+  P: '.--.',
+  Q: '--.-',
+  R: '.-.',
+  S: '...',
+  T: '-',
+  U: '..-',
+  V: '...-',
+  W: '.--',
+  X: '-..-',
+  Y: '-.--',
+  Z: '--..'
 }
 
 def decode_char(character)
-  $letters.each do |key,value|
-    if value == character
-      return key
-      break
-    end
+  letters.each do |key, value|
+    break if value == character
+    
+    return key
   end
 end
 
@@ -40,7 +39,7 @@ def decode_word(word)
   word_array = word.split
   result = ''
   word_array.each do |i|
-    result = result + decode_char(i).to_s
+    result += decode_char(i).to_s
   end
   print result
 end
