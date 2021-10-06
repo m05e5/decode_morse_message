@@ -27,7 +27,7 @@ def decode_char(character)
     Y: '-.--',
     Z: '--..'
   }
-  letters.each do |key, value|   
+  letters.each do |key, value|
     break if value == character
 
     return key
@@ -51,7 +51,7 @@ def decode_phrase(phrase)
     final = if final == ''
               decode_word(j).to_s
             else
-              "#{final} #{decode_word(j)}.to_s"
+              "#{final} #{decode_word(j).to_s}"
             end
   end
   print final
