@@ -28,9 +28,10 @@ def decode_char(character)
     Z: '--..'
   }
   letters.each do |key, value|
-    break if value == character
-
-    return key
+    if value == character
+      return key
+      break
+    end
   end
 end
 
@@ -54,5 +55,5 @@ def decode_phrase(phrase)
               "#{final} #{decode_word(j).to_s}"
             end
   end
-  print final
+  return final
 end
